@@ -195,11 +195,12 @@ input_img = content_img.clone()
 
 ## Gradient Descent
 # Import LBFGS Optimizer
+lr=0.004
 def get_input_optimizer(input_img):
     # this line to show that input is a parameter that requires a gradient
-    optimizer = optim.LBFGS([input_img]);
+    # optimizer = optim.LBFGS([input_img]);
     # optimizer = optim.SGD([input_img], lr=1e-4);
-    # optimizer = optim.Adam([input_img]);
+    optimizer = optim.Adam([input_img], lr=lr);
     return optimizer
 
 
